@@ -3,8 +3,10 @@ table {
     max-width: 70%;
   }
 }
-form {
-  @media (min-width: 768px) {
-    max-width: 70%;
-  }
+tr,
+th,
+td {
+  background-color: #007f5f;
+  color: white;
+  border-color: gray;
 }
