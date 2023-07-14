@@ -28,9 +28,12 @@ export class AddFormComponent {
       this.newItemForm.markAllAsTouched();
       return;
     }
-
     this.listService.list.push(this.newItemForm.value);
     this.listService.saveToLocalStorage();
     this.newItemForm.reset();
+    // To make error disapear after reset the form
+    Object.keys(this.newItemForm.controls).forEach((key) => {
+      this.newItemForm.controls[key].setErrors(null);
+    });
   }
 }
